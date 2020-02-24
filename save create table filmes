@@ -1,0 +1,15 @@
+CREATE TABLE `filmes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(40) DEFAULT NULL,
+  `mes` varchar(10) DEFAULT NULL,
+  `ano` int(11) DEFAULT NULL,
+  `genero` varchar(20) DEFAULT NULL,
+  `tipo` varchar(10) DEFAULT NULL,
+  `receita` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+insert into filmes
+(nome, mes, ano, genero, tipo, receita)
+values
+( 'TesteFilme', 'Janeiro', 2020, 'Comédia','Video', 300945846);

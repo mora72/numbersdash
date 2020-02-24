@@ -1,0 +1,3 @@
+{% if filtertopatual == "on" %}
+<input type="checkbox" class="custom-control-input" id="customSwitch1">
+onclick="muda('off')

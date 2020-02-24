@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}NumbersDash{% endblock %}
+{% load humanize %}
+
+{% block content %}
+<div class="offset-4 col-5 listaanos-div">
+    <h3>Resumo Anual</h3>
+    <div class="container lista-anos">
+        <table class="table">   <!--  table-bordered table-sm  -->
+            <thead>
+            <tr>
+                <th class="text-center">Ano</th>
+                <th class="text-right">Quantidade</th>
+                <th class="text-right">Receita</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for ano in listaanos %}
+            <tr>
+                <td class="text-center">{{ano.ano}}</td>
+                <td class="text-right">{{ano.qtde}}</td>
+                <td class="text-right">{{ano.receita | intcomma}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
